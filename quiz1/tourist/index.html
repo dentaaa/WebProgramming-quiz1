@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tourist Places</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/clockstyle.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Brananda Denta</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profil/index.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../hometown/index.html">Hometown</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../culinary/index.html">Culinary</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="tourist/index.html">Tourist</a></li> -->
+                </ul>
+            </div>
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                const deg = 6;
+                const hr = document.querySelector('#hr');
+                const mn = document.querySelector('#mn');
+                const sc = document.querySelector('#sc');
+                
+                setInterval(() => {
+    
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+    
+                hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+                mn.style.transform = `rotateZ(${mm}deg)`;
+                sc.style.transform = `rotateZ(${ss}deg)`;
+                })
+            </script>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Tourist -->
+             <section class="resume-section" id="tourist">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Tourist Places</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3>Pari Temple</h3>
+                            <p> <img src="../img/candipari.jpg" alt="candipari" width="400" height="300"> </p>
+                            <div>Pari Temple is a temple located about 2 km to the northwest from the center of Lapindo Mud. This temple is located in Candi Pari Village, Porong sub-district, Sidoarjo Regency. This temple is a temple with a square brick building, facing west with a threshold and the gate is made by natural andesite stone. The architectural style of the Pari temples is influenced by the Campa culture, which is or is Vietnam today, especially the temples at Mison. This influence can be seen in the buildings and ornaments, but Candi Pari still shows Indonesian character.</div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mt-5">Lapindo Mud</h3>
+                            <p> <img src="../img/lapindo.jpg" alt="lapindo" width="400" height="300"> </p>
+                            <div>The Lapindo Mud Zone is located in Porong Sidoarjo District, an area that was once a residential area and an industrial area, submerged under the mud of PT. Lapindo due to wrong procedures during drilling. Currently the Lapindo area is used as a tourist attraction, for tourists from outside the city who want to see the muddy area, many have come to this area. The hot weather and the arid ground, the occasional burst of gas from the blast is a sight that can be enjoyed.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    </body>
+</html>

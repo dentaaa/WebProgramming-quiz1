@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Hometown</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/clockstyle.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Brananda Denta</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profil/index.html">Profil</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="hometown/index.html">Hometown</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="../culinary/index.html">Culinary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../tourist/index.html">Tourist</a></li>
+                </ul>
+            </div>
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                const deg = 6;
+                const hr = document.querySelector('#hr');
+                const mn = document.querySelector('#mn');
+                const sc = document.querySelector('#sc');
+                
+                setInterval(() => {
+    
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+    
+                hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+                mn.style.transform = `rotateZ(${mm}deg)`;
+                sc.style.transform = `rotateZ(${ss}deg)`;
+                })
+            </script>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Hometown -->
+            <section class="resume-section" id="hometown">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Hometown</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mt-5">Sidoarjo</h3>
+                            <p>Sidoarjo is one of the most popular City in Jawa Timur, Sidoarjo Regency is bordered by Surabaya city and Gresik Regency to the north, by Pasuruan Regency to the south, by Mojokerto Regency to the west and by the Madura Strait to the east.It has an area of 602.14 km², making it the smallest regency in East Java.  </p>
+                        </div>
+                            <div class="flex-grow-1">
+                                <img src="../img/jayandaru1.jpg" alt="jayandaru1">
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    </body>
+</html>

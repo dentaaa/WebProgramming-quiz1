@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Culinary</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/clockstyle.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Brananda Denta</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profil/index.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../hometown/index.html">Hometown</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="culinary/index.html">Culinary</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="../tourist/index.html">Tourist</a></li>
+                </ul>
+            </div>
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                const deg = 6;
+                const hr = document.querySelector('#hr');
+                const mn = document.querySelector('#mn');
+                const sc = document.querySelector('#sc');
+                
+                setInterval(() => {
+    
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+    
+                hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+                mn.style.transform = `rotateZ(${mm}deg)`;
+                sc.style.transform = `rotateZ(${ss}deg)`;
+                })
+            </script>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0"> 
+            <!-- Culinary -->
+            <section class="resume-section" id="culinary">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Culinary</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3>Lontong Kupang</h3>
+                            <p> <img src="../img/lontongkupangg.jpg" alt="lontongkupangg" width="300" height="300"> </p>
+                            <div>Lontong kupang is a dish of lontong slices that are doused with a sauce that has been flavored with garlic, chilies and special spices in Sidoarjo, namely petis. After dousing the broth, the lontong is poured again with boiled mussels and the broth. To arouse your appetite, sprinkle fried onions on top of the mussels.</div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mt-5">Smoked Bandeng</h3>
+                            <p> <img src="../img/bandengasap.jpg" alt="bandengasap" width="400" height="300"> </p>
+                            <div>Smoked bandeng is a typical food of Sidoarjo, East Java. It is processed from fresh bandeng which is ripened by smoking, producing smoked bandeng with a distinctive and delicious taste. These processed foods can also last several days without being stored in the refrigerator, so they make great souvenirs.</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mt-5">Ote Ote Porong</h3>
+                            <p> <img src="../img/oteoteporong.jpg" alt="oteoteporong" width="400" height="300"> </p>
+                            <div>So far, if you hear ote ote, it must immediately lead to cheap and doubtful street food snacks. But this typical Porong ote is indeed a different class than the usual ote ote.
+                                made with chicken, oyster and mushroom filling and covered by a thin and crispy skin, this ote ote porong is very suitable for a typical souvenir from Sidoarjo.</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mt-5">Bakso Pertamax</h3>
+                            <p> <img src="../img/baksopertamax.jpg" alt="baksopertamax" width="400" height="300"> </p>
+                            <div>
+                                A bowl of meatballs at Warung Bakso Pertamax is like a typical meatball soup which contains meatballs, mustard chunks, complete with fried dumplings and doused with plain clear meat sauce. But not only that, when served, these meatballs are completed with colorful sauce in a tiny glass. The color matches the name BBM. When you want to eat colored sauce, just pour it into the bowl filled with clear broth.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    </body>
+</html>
